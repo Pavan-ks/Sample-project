@@ -1,8 +1,11 @@
+//vendors
 import React, { useState, useEffect } from 'react';
 
+//components
 import Card from '../UI/Card/Card';
-import classes from './Login.module.css';
 import Button from '../UI/Button/Button';
+//css
+import './Login.css'
 
 const Login = (props) => {
   const [enteredEmail, setEnteredEmail] = useState('');
@@ -47,13 +50,9 @@ const Login = (props) => {
   };
 
   return (
-    <Card className={classes.login}>
+    <Card className="login">
       <form onSubmit={submitHandler}>
-        <div
-          className={`${classes.control} ${
-            emailIsValid === false ? classes.invalid : ''
-          }`}
-        >
+        <div className={`control ${emailIsValid === false ? 'invalid' :''}`}>
           <label htmlFor="email">E-Mail</label>
           <input
             type="email"
@@ -63,11 +62,7 @@ const Login = (props) => {
             onBlur={validateEmailHandler}
           />
         </div>
-        <div
-          className={`${classes.control} ${
-            passwordIsValid === false ? classes.invalid : ''
-          }`}
-        >
+        <div className={`control ${passwordIsValid === false ? 'invalid' :''}`}>
           <label htmlFor="password">Password</label>
           <input
             type="password"
@@ -77,8 +72,8 @@ const Login = (props) => {
             onBlur={validatePasswordHandler}
           />
         </div>
-        <div className={classes.actions}>
-          <Button type="submit" className={classes.btn} disabled={!formIsValid}>
+        <div className='actions'>
+          <Button type="submit" className="button" disabled={!formIsValid}>
             Login
           </Button>
         </div>

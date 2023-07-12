@@ -1,11 +1,13 @@
+//vendors
 import React from 'react';
-
+//components
 import Card from '../UI/Card/Card';
-import classes from './Home.module.css';
+//css
+import './Home.css'
 
 const Home = (props) => {
   return (
-    <Card className={classes.home}>
+    <Card className="home">
       <h1>Welcome back!</h1>
     </Card>
   );
