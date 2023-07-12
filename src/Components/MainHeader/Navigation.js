@@ -1,10 +1,12 @@
+//vendors
 import React from 'react';
 
-import classes from './Navigation.module.css';
+//css
+import './Navigation.css';
 
 const Navigation = (props) => {
   return (
-    <nav className={classes.nav}>
+    <nav className="nav">
       <ul>
         {props.isLoggedIn && (
           <li>

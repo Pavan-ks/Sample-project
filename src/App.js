@@ -1,10 +1,12 @@
+//vendors
 import React, { useState, useEffect } from 'react';
 
+//components
 import Login from '../src/Components/Login/Login';
 import Home from '../src/Components/Home/Home';
 import MainHeader from '../src/Components/MainHeader/MainHeader';
 
-function App() {
+const App = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   useEffect(() => {
